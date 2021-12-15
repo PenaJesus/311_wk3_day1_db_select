@@ -44,20 +44,26 @@ Also, put the answers in the "Query Responses" section of this README.
 ## Query Responses
 
 1.
-  * How many rows were returned:
-  * First name of the first user:
+	SELECT * FROM users WHERE city = "Chicago";
+  * How many rows were returned: 7
+  * First name of the first user: Mitsue
 
 2.
-  * How many rows were returned:
-  * What states do they live in:
+  SELECT state FROM users WHERE first_name = "Glory";
+  * How many rows were returned:2
+  * What states do they live in: MD, TX
 
 3.
-  * How many rows were returned:
-  * What's the last email on the list:
+  SELECT * FROM users WHERE phone1 LIKE "773%";
+  * How many rows were returned: 6
+  * What's the last email on the list: nichelle_meteer@meteer.com
 
 ## Summary
 
 Think about how this data is laid out. Feel free to look in the `initialize.sql` file to see the raw data.
 
 * Do you think it would be easier or harder to search through this data manually or using SQL?
+It would be easier using SQL because using simple queries we can access the data by the criteria we are looking for
+
 * What about when the dataset gets larger?
+When the dataset gets larger it would be even easier because looking at all that data jumbled up onto one line for 10,000 lines would get difficult. If you need to find everyone who lives in TX you would have to look at each individual line and look for the letter "TX" instead of it being sorted in a "state" column
